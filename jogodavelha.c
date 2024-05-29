@@ -9,7 +9,7 @@ void tabela(){
     printf("\n");
 }
 }
-int a=0;
+int rodada=0;
 void preencher(int linha,int coluna){
        if(mat[linha][coluna]=='-' && linha>0 && linha<4 && coluna>0 && coluna<4){
             if(a%2==0){
@@ -19,7 +19,7 @@ void preencher(int linha,int coluna){
                 mat[linha][coluna]='O';
             }
                tabela();
-               a++;
+               rodada++;
         }
 }
  int resultado(){
@@ -34,22 +34,22 @@ void preencher(int linha,int coluna){
                 }
             }
         }
-        if(a%2==0 && vit==1){
+        if(rodada%2==0 && vit==1){
        printf("jogador O venceu\n");
        return 1;
         }
-        else if(a%2==1 && vit==1){
+        else if(rodada%2==1 && vit==1){
         printf("jogador X venceu\n");
         return 1;
         }
-        else if(a>8){
+        else if(rodada>8){
             printf("empate\n");
             return 1;
         }
         return 0;
  }
 void vez(){
-       if(a%2==0){
+       if(rodada%2==0){
             printf("vez do jogador X\n");
         }
         else{
