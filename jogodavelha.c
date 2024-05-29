@@ -12,7 +12,7 @@ void tabela(){
 int rodada=0;
 void preencher(int linha,int coluna){
        if(mat[linha][coluna]=='-' && linha>0 && linha<4 && coluna>0 && coluna<4){
-            if(a%2==0){
+            if(rodada%2==0){
                 mat[linha][coluna]='X';
             }
             else{
@@ -62,7 +62,7 @@ int main(){
     printf("insira o numero da linha e da coluna\n");
     printf("\n");
     int linha,coluna;
-   while(a<9){
+   while(rodada<9){
       vez();
       scanf("%d %d",&linha,&coluna);
       preencher(linha,coluna);
